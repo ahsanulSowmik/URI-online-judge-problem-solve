@@ -1,31 +1,20 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main ()
-{
-    int tc,a,b;
+int main(){
+    int n, i, a, c;
+    char b;
 
-    char c;
+    scanf("%d",&n);
 
-    scanf("%d",&tc);
+    for(i = 0; i < n; i++){
+        scanf("%d%c%d",&a,&b,&c);
 
-    while(tc--)
-    {
-        scanf("%d %c %d",&a,&c,&b);
-
-        if(c >='A' &&  c<='Z' && a!=b)
-        {
-            printf("%d\n",b-a);
-
-        }
-        else if(c >='a' &&  c<='z' && a!=b )
-        {
-            printf("%d\n",a+b);
-        }
-        else if (a==b)
-        {
-            printf("%d\n",a*b);
-        }
+        if(a == c)
+            printf("%d\n",a*c);
+        else if(b >= 65 && b <= 90)
+            printf("%d\n",c-a);
+        else
+            printf("%d\n",c+a);
     }
-
     return 0;
 }
